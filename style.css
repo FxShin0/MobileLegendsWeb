@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Lato";
+}
+:root {
+  --dark-bg: #131415;
+  --white: #f3f2f4;
+  --gold: #c4a067;
+}
+body {
+  background: var(--dark-bg);
+  color: var(--white);
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* Section 1 -> Navbar */
+.nav {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 10px rgba(234, 193, 136, 0.4);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background: var(--dark-bg);
+}
+.nav-logo {
+  height: 80%;
+  width: 230px;
+  background-image: url(./assets/full\ logo.png);
+  background-position: center;
+  background-size: cover;
+}
+.nav-list-container {
+  display: flex;
+  padding-right: 57px;
+}
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.nav-list li a {
+  color: var(--white);
+  font-size: 30px;
+}
+.btn-menu {
+  display: none;
+}
+/* Section 2 -> Hero */
+.hero {
+  padding-top: 150px;
+  padding-bottom: 70px;
+  display: flex;
+  padding-right: 40px;
+  padding-left: 40px;
+  justify-content: space-around;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 40%;
+}
+.golden-span {
+  color: var(--gold);
+}
+.hero-title {
+  font-size: 70px;
+  text-align: center;
+}
+.video-container {
+  width: 560px;
+  height: 315px;
+}
+.hero-text-container p {
+  font-size: 20px;
+}
+/* Section 2 -> Guias */
+.guias {
+  display: flex;
+  padding-top: 70px;
+  flex-direction: column;
+  padding-right: 40px;
+  padding-left: 40px;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.guias-text-container {
+  font-size: 40px;
+}
+.guias-videos-container {
+  max-width: 1300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.guias-videos-card {
+  width: 350px;
+  height: 196.88px;
+}
+.button {
+  background-color: var(--gold);
+  height: 70px;
+  width: 250px;
+  color: var(--white);
+  border-radius: 10px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 2px var(--white);
+  transition: all 0.3s ease;
+}
+.button:hover {
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 4px #ffffff);
+  color: var(--gold);
+  background-color: var(--white);
+  border: solid 2px black;
+}
+/* Section 3 -> Heroes */
+.heroes {
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  padding-right: 40px;
+  padding-left: 40px;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.heroes-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.heroes-text-container h2 {
+  font-size: 60px;
+}
+.heroes-text-container p {
+  font-size: 30px;
+  text-align: center;
+}
+.heroes-cards-container {
+  max-width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.heroes-card {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  align-items: center;
+  background-color: var(--dark-bg);
+  border-radius: 10px;
+  border: solid 4px var(--gold);
+  transition: all 0.3s ease;
+}
+.heroes-card:hover {
+  filter: drop-shadow(0px 0px 7px white);
+  cursor: pointer;
+}
+.heroes-card-image {
+  height: 200px;
+  width: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+.heroes-card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  color: var(--white);
+  width: auto;
+  height: 200px;
+}
+.heroes-card-text h3 {
+  font-size: 30px;
+}
+.heroes-card-text ul {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  font-size: 15px;
+  font-weight: bold;
+}
+/* Fotos de los heroes */
+.melissa {
+  background-image: url(./assets/heroes/melissa.jpg);
+}
+.fanny {
+  background-image: url(./assets/heroes/fanny.webp);
+}
+.arlott {
+  background-image: url(./assets/heroes/arlott.webp);
+}
+.angela {
+  background-image: url(./assets/heroes/angela.jpg);
+}
+.atlas {
+  background-image: url(./assets/heroes/atlas.webp);
+}
+.nana {
+  background-image: url(./assets/heroes/nana.png);
+}
+/* Section 4 -> Descarga */
+.descarga {
+  padding-top: 70px;
+  display: flex;
+  flex-direction: row;
+  padding-right: 40px;
+  padding-left: 40px;
+  justify-content: flex-start;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+.descarga-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 60%;
+}
+.descarga-text-container h2 {
+  font-size: 80px;
+  text-align: center;
+}
+.descarga-text-container p {
+  font-size: 40px;
+  text-align: center;
+}
+.descarga-icons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  padding-top: 10px;
+}
+.google-apple {
+  display: flex;
+  gap: 15px;
+  border: solid 2px white;
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+.google-apple i {
+  font-size: 70px;
+  color: var(--gold);
+}
+.google-apple h3 {
+  font-size: 50px;
+}
+.sep {
+  gap: 20px;
+}
+.google-apple:hover {
+  color: var(--gold);
+  background-color: var(--white);
+}
+/* Section 5 Footer */
+footer {
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0px 2px 10px rgba(234, 193, 136, 0.4);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  flex-wrap: wrap;
+}
+.footer-text-container {
+  display: flex;
+  flex-direction: column;
+}
+.footer-icons-container {
+  font-size: 30px;
+  display: flex;
+  gap: 20px;
+}
+.footer-icons-container a i {
+  color: var(--gold);
+}
