@@ -8,6 +8,7 @@
   font-family: "Lato";
 }
 :root {
+  --darker-bg: #111;
   --dark-bg: #131415;
   --white: #f3f2f4;
   --gold: #c4a067;
@@ -53,9 +54,15 @@ body {
   color: var(--white);
   font-size: 30px;
 }
-.btn-menu {
+#toggle-menu {
   display: none;
+  transition: all 0.3s ease;
 }
+.bars-menu {
+  display: none;
+  transition: all 0.3s ease;
+}
+
 /* Section 2 -> Hero */
 .hero {
   padding-top: 150px;
@@ -104,6 +111,9 @@ body {
 }
 .guias-text-container {
   font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .guias-videos-container {
   max-width: 1300px;
@@ -158,6 +168,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   margin: 0 auto;
+  text-align: center;
 }
 .heroes-text-container h2 {
   font-size: 60px;
@@ -301,6 +312,7 @@ footer {
   padding-top: 10px;
   padding-bottom: 10px;
   flex-wrap: wrap;
+  width: 100%;
 }
 .footer-text-container {
   display: flex;
@@ -313,4 +325,122 @@ footer {
 }
 .footer-icons-container a i {
   color: var(--gold);
+}
+@media (max-width: 1091px) {
+  /* Mod Section 1 -> Hero */
+  .hero {
+    padding-right: 10px;
+    padding-left: 10px;
+    gap: 30px;
+    flex-direction: column;
+    padding-bottom: 0px;
+  }
+  .hero-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+  }
+  .hero-title {
+    font-size: 60px;
+    text-align: center;
+  }
+  .hero-text-container p {
+    font-size: 23px;
+    text-align: center;
+  }
+  /* Section 4 -> Descarga */
+  .descarga {
+    flex-direction: column;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+@media (max-width: 789px) {
+  /* Cambios sobre el navbar y agregado de menu hamburguesa */
+  .hero-text-container {
+    width: 80%;
+  }
+  .nav-list {
+    display: none;
+  }
+  .btn-menu {
+    display: flex;
+    position: static;
+  }
+  .bars-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    transition: all 0.4s ease;
+    padding-top: 6px;
+  }
+  .bars-menu span {
+    height: 3px;
+    width: 40px;
+    background-color: var(--gold);
+    transition: all 0.4s ease;
+  }
+  #toggle-menu:checked ~ .bars-menu span:nth-child(1) {
+    position: absolute;
+    top: 6px;
+    transform: rotate(135deg);
+  }
+  #toggle-menu:checked ~ .bars-menu span:nth-child(2) {
+    opacity: 0;
+  }
+  #toggle-menu:checked ~ .bars-menu span:nth-child(3) {
+    position: absolute;
+    top: 6px;
+    transform: rotate(225deg);
+  }
+  #toggle-menu:checked ~ .nav-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    width: 100%;
+    background-color: var(--dark-bg);
+    border: solid 2px var(--gold);
+    border-radius: 10px;
+    gap: 25px;
+  }
+  .descarga-text-container {
+    max-width: 80%;
+  }
+}
+@media (max-width: 546px) {
+  /* Cambios a los tamaños de fuente de Hero y Descarga */
+  .hero-text-container {
+    width: 80%;
+  }
+  .hero-title {
+    font-size: 50px;
+    text-align: center;
+  }
+  .video-container {
+    width: 480px;
+    height: 270px;
+  }
+  .hero-text-container p {
+    font-size: 27px;
+  }
+  .descarga-text-container {
+    max-width: 80%;
+  }
+  .descarga-text-container h2 {
+    font-size: 60px;
+  }
+  .descarga-text-container p {
+    font-size: 30px;
+  }
+}
+@media (max-width: 494px) {
+  /* Cambios al footer */
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
 }
