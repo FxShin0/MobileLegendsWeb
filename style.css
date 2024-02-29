@@ -6,6 +6,8 @@
   list-style: none;
   text-decoration: none;
   font-family: "Lato";
+  scroll-behavior: smooth;
+  scroll-padding-top: 40px;
 }
 :root {
   --darker-bg: #111;
